@@ -27,3 +27,15 @@ This repository contains **Dockerfile** of [Nginx](http://nginx.org/) for [Docke
     docker run -d -p 80:80 -v <sites-enabled-dir>:/etc/nginx/conf.d -v <certs-dir>:/etc/nginx/certs -v <log-dir>:/var/log/nginx -v <html-dir>:/var/www/html dockerfile/nginx
 
 After few seconds, open `http://<host>` to see the welcome page.
+
+
+nginx
+
+/root/nginx/sites-enabled
+/root/nginx/certs
+/root/nginx/html
+/root/nginx/logs
+
+docker run -d -p 80:80 -v /root/nginx/sites-enabled:/etc/nginx/conf.d -v /root/nginx/certs:/etc/nginx/certs -v /root/nginx/logs:/var/log/nginx -v /root/nginx/html:/var/www/html dockerfile/nginx
+
+
